@@ -1,0 +1,58 @@
+// Zadanie 1
+// a)
+result_a = asin(-0.45);
+disp("a)");
+disp(result_a);
+
+// b)
+matrix_b = [
+    7  -2   3;
+    1   2   4;
+   -2   5   8;
+    6  -1   0
+];
+rank_b = rank(matrix_b);
+disp("b)");
+disp(rank_b);
+
+// c)
+v = 20;
+r = 30;
+ad = v^2 / r;
+disp("c)");
+disp(ad);
+
+// d)
+n_values = 1:40;
+sum_d = sum((n_values - 3) ./ (n_values.^3));
+disp("d)");
+disp(sum_d);
+
+// Zadanie 2
+x = 0:0.01:2;
+
+f1 = cos(2 * x);
+f2 = x.^2 - x + 1;
+
+clf;
+plot(x, f1, 'r', x, f2, 'b');
+legend("f = cos(2x)", "f = x^2 - x + 1");
+xlabel("x");
+ylabel("f(x)");
+title("Wykres funkcji f = cos(2x) i f = x^2 - x + 1");
+grid on;
+
+// Zadanie 3
+lata = [2015, 2017, 2019];
+zloty = [4, 2, 3];
+srebrny = [2, 0, 1];
+brazowy = [3, 4, 0];
+
+clf; x = [1, 2, 3];
+bar([zloty', srebrny', brazowy'], 'grouped');
+
+legend(['Złote', 'Srebrne', 'Brązowe'], "location", "northwest");
+xticks(x, string(lata));
+xlabel("Rok");
+ylabel("Liczba medali");
+title("Medale w latach 2015-2019");
